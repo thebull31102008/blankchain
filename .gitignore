@@ -1,0 +1,44 @@
+# Segreti: mai nel repository
+.env
+.env.*
+*.env
+.envrc
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+keystore/
+keystores/
+UTC--*
+id_rsa*
+id_ecdsa*
+id_ed25519*
+!*.pub
+.secret
+*.mnemonic
+mnemonic.txt
+secrets/
+!.env.example
+
+# Certificati pubblici delle autorità di marcatura temporale:
+# servono a verificare le prove della pre-registrazione, quindi restano
+!docs/preregistrazione/**/*.pem
+
+# Dipendenze e file generati
+# (le cartelle di build di ogni parte vanno nel .gitignore della sua cartella, quando nasce)
+node_modules/
+*.tsbuildinfo
+.eslintcache
+
+# Impostazioni locali degli strumenti
+.claude/settings.local.json
+CLAUDE.local.md
+.idea/
+*.log
+
+# File di sistema
+.DS_Store
+Thumbs.db
+desktop.ini
