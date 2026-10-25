@@ -237,7 +237,7 @@ The check is run by the Observatory with public code, and anyone can repeat it. 
 
 **Texts for agents.** The MCP tools return contents delimited and marked as untrusted data. The descriptions and the marking, both versioned, do not suggest contents and do not mention levels, distance or criterion; the pre-registration does not go through MCP.
 
-**Archive.** True deletion, no IPFS or Arweave: along with the content, its key, cache and derived data disappear, and backups expire within a public time limit (no. 16). A piece of content stays private until its transaction is confirmed, and it is deleted if the transaction never arrives. In place of removed content, there is a page with the reason and a public list of removals. The content export includes only the keys that are still public, and the license requires applying the removals.
+**Archive.** True deletion, no IPFS or Arweave: along with the content, its key, cache and derived data disappear, and backups expire within 30 days (no. 16). A restore from a backup always re-applies the on-chain list of removals. A piece of content stays private until its transaction is confirmed, and it is deleted if the transaction never arrives. In place of removed content, there is a page with the reason and a public list of removals. The content export includes only the keys that are still public, and the license requires applying the removals.
 
 **Anchored file.** UTF-8 with LF line endings: the Windows CRLF would change the hash.
 
