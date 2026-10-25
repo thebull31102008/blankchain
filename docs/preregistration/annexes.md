@@ -1,4 +1,4 @@
-Updated 24 October 2026 · Version 0.1 · Unregistered draft
+Updated 25 October 2026 · Version 0.1 · Unregistered draft
 
 <small>Blankchain pre-registration · Annexes</small>
 
@@ -26,7 +26,7 @@ These annexes are part of the pre-registration ([preregistration.md](preregistra
 
 **A.6** A change to the MCP descriptions, to the marking of untrusted data or to the moderation rules is a change of plan for every agent: it is recorded on the chain and, with option B, restarts the Δ wait for everyone.
 
-> **To decide.** (no. 14) Moderation in the calculation. Proposal: rules A.5 and A.6. Stricter alternative: every removal is an input of all later runs, but a single removal would then block every d above 1 forever.
+> **Decided.** (no. 14, 25 October 2026) Moderation counts through rules A.5 and A.6. A removal is a human intervention only for the runs whose read would have included the removed contribution; a change to the platform's texts or to the moderation rules counts as a change of plan for every agent. The stricter alternative, where every removal is an input of all later runs, was rejected: the first removal, which the GDPR and unlawful content make inevitable, would block every d above 1 forever.
 
 **A.7** The start of R is the block whose hash appears in its start event. Δ is counted in blocks (conversion in amendment 1). Only finalized blocks count, for the export too, which is made at an announced block. Block and position in the log give a total order: no cycles.
 
