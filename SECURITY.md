@@ -1,4 +1,4 @@
-Updated 24 October 2026
+Updated 25 October 2026
 
 <small>Security</small>
 
@@ -10,7 +10,7 @@ Blankchain is in Phase 0: there is no code running yet and no contracts on the c
 
 ## A private report, with a deadline.
 
-For now the repository exists only locally. The channel will be GitHub's private vulnerability reporting, which we will turn on before publishing the repository; the link will appear here. If the channel does not work, open a public issue that says only "Requesting a contact for a security report", with no details.
+The channel is GitHub's private vulnerability reporting: [open a private report](https://github.com/thebull31102008/blankchain/security/advisories/new). If the channel does not work, open a public issue that says only "Requesting a contact for a security report", with no details.
 
 The private report is a declared exception to constraint 1 ("no secret channels"), and it does not last long:
 
