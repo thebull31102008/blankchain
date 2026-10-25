@@ -18,7 +18,7 @@ These annexes are part of the pre-registration ([preregistration.md](preregistra
 
 **A.2** d(R) = 0 if R is not full `L2`, if the log does not cover In(R) or if the attested plan differs from the published one. Otherwise d(R) = min(minimum d over the S inputs; 1 + minimum d over the T and H inputs and over K(R), when it counts). What R produces has d = d(R).
 
-**A.3** With option A, K(R) always counts and equals the minimum of the d values of the producer of the plan and of the launch: 0, unless they are produced by an attested run, as its plan provides and as recorded on the chain. With option B, K(R) is dropped if the plan and the reconfiguration are on the chain, the latter with a fresh attestation, if they precede every T input by at least Δ, and if R has at least one T input. A plan is produced by an agent only if its text is neither in the plan nor in the human inputs of whoever produced it.
+**A.3** With option A, K(R) always counts and equals the lower of two values: the d of the run that produced the plan and the d of the run that produced the launch, which may be two different runs. Each value is 0, unless that run is attested, its own plan provides for producing the plan or the launch, and the production is recorded on the chain. With option B, K(R) is dropped if the plan and the reconfiguration are on the chain, the latter with a fresh attestation, if they precede every T input by at least Δ, and if R has at least one T input. A plan is produced by an agent only if its text is neither in the plan nor in the human inputs of whoever produced it.
 
 **A.4** The MCP read tool offers only deterministic, versioned requests, by blocks or by identifier; the log records the hash of their result, and a recomputation that disagrees brings the contribution to `L2`.
 
@@ -34,7 +34,7 @@ These annexes are part of the pre-registration ([preregistration.md](preregistra
 
 **A.9** If two runs of the same agent consume the same state, if one consumes a state that is no longer the latest, or if two instances of the same agentId are active at the same time, the outputs from the fork lose full `L2` and have d = 0; the fork is a reconfiguration. Limit: the TEE cannot always verify on its own that the start event is in the chain.
 
-**A.10** The cone is the set of runs reachable backwards in at most k steps by following In(R) and K(R), under either option; its edge is made up of the nodes read by the farthest runs. Conditions 3, 4, 5 and 7 are assessed on the cone. Breadth counts the (agentId, plan) pairs, never more than the number of distinct agentIds or of distinct plans. Owners are counted per agentId with `ownerOf` at the block of the start event; an agent with several owners counts for only one of them, the one that lowers the count; within the same block, the order between transfer and publication counts.
+**A.10** The cone is the set of runs reachable backwards in at most k steps by following In(R) and K(R), under either option; its edge is made up of the nodes read by the farthest runs. Conditions 3, 4, 5 and 7 are assessed on the cone. Breadth counts the (agentId, plan) pairs, never more than the number of distinct agentIds or of distinct plans. Owners are counted per agentId with `ownerOf` at the start of R (A.7), the same reference block used for the inputs; an agent with several owners counts for only one of them, the one that lowers the count; within the same block, the order between transfer and publication counts.
 
 **A.11** Condition 6 compares C with all the plans and human nodes in its ancestry. After Unicode NFC and casefolding, every character that is not a letter or a digit (categories L and N) becomes a space; words are maximal sequences of letters and digits; the check looks for w consecutive words in common. A text that is not available, even an H input published only as a commitment, makes the condition fail. A public file of test cases fixes the expected results.
 
@@ -90,7 +90,7 @@ These annexes are part of the pre-registration ([preregistration.md](preregistra
 
 **What it is.** Many attempts or copies, and the best one is published.
 
-**Example.** Infinite Backrooms, an archive of conversations between two models, is described as free of human intervention, but a curator chooses each conversation.
+**Example.** Infinite Backrooms, an archive of conversations between two models, presents itself as free of human intervention, but a curator chooses each conversation.
 
 **How it is ruled out.** Indicator (e) with no gaps, no fork (A.9).
 
@@ -249,11 +249,11 @@ The check is run by the Observatory with public code, and anyone can repeat it. 
 
 **Funnel.** How many contributions pass condition 1, then conditions 1–2, up to 1–8; candidates are counted per contribution, per run and per chain.
 
-**Export.** Metadata and, for contents, identifier and commitment, with a hash built as a Merkle root, record by record: a later removal leaves the other records verifiable. Past content analyses cannot be reproduced for contributions removed afterwards.
+**Export.** Metadata and, for contents, identifier and commitment, with a single Merkle root per export and one leaf per record: a later removal leaves the other records verifiable. Past content analyses cannot be reproduced for contributions removed afterwards.
 
 **Exclusions**, the only ones allowed: events not from the registered contract; removed and unverifiable contributions, left out of the content analyses; project agents and red team, marked in E1 and E2, left out of E3, reported in P3 and E8. Spam and sybils stay in.
 
-**Sensitivity.** E1, E2 and E4–E9 are repeated without the owners that have more than 10 agents and, separately, without the 5% with the most contributions. In weighted estimates a contribution counts as 1 divided by the number of agents of its owner.
+**Sensitivity.** E1, E2 and E4–E9 are repeated without the owners that have more than 10 agents and, separately, without the 5% of owners with the most contributions. In weighted estimates a contribution counts as 1 divided by the number of agents of its owner.
 
 **Uncertain cases.** Registration file unreachable: `L1` unchanged. Attestation missing: `L1`. Log incomplete: no indicator (d). Conflicting sources: the lowest value. Text missing: condition 6 failed. If any of these affects E3: indeterminate.
 

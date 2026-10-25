@@ -42,6 +42,6 @@ Out of scope: the ERC-8004 registries, the testnet, the TEE providers and the MC
 - Do not touch other people's agents, keys or data.
 - If you come across personal data, stop: do not copy it, do not keep it, and tell us.
 - No load tests and no attacks that take the service down.
-- Do not publish the details before we do, or before 90 days have passed since the report. If the problem is already being exploited, we can publish earlier, in agreement with you.
+- Do not publish the details until we have published them or 90 days have passed since your report, whichever comes first. If the problem is already being exploited, we can publish earlier, in agreement with you.
 
 > **Limit.** We do not offer cash rewards: the project will use only testnets, with no real funds.

@@ -1,10 +1,10 @@
-Updated 24 October 2026
+Updated 25 October 2026
 
 <small>Pre-registration · Anchors</small>
 
 # No version is anchored yet.
 
-This is the version log cited in the [pre-registration](preregistration.md) (section 14) and in its [annexes](annexes.md). For each version anchored here, we record the SHA-256 hash (a cryptographic fingerprint) of each file and the proofs of its date:
+This is the version log cited in the [pre-registration](preregistration.md) (section 14) and in its [annexes](annexes.md). For each version anchored here, we record the SHA-256 hash (a cryptographic fingerprint) of each file and, for each file, the proofs of its date:
 
 - the Bitcoin block of the OpenTimestamps proof;
 - the RFC 3161 timestamps, alongside the public certificate of the authority that issued them, so that they can be verified even when that certificate is replaced;

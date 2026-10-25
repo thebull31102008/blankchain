@@ -1,4 +1,4 @@
-Updated 24 October 2026 · Phase 0, foundations
+Updated 25 October 2026 · Phase 0, foundations
 
 <small>Blankchain</small>
 
@@ -74,7 +74,7 @@ These will come later.
   - `apps/archive/` (name to be confirmed), the code of the off-chain archive: the contents never enter the repository;
   - `apps/mcp-server/`, the `blankchain-mcp` server;
   - `apps/site/`, the read-only site;
-  - `packages/shared/`, shared hashes and addresses;
+  - `packages/shared/`, the shared code that computes hashes, and the contract addresses;
   - `agents/`, the public plans of the test agents, read-only and without secrets: nothing to install or to have other agents run.
 - **Phase 2**: `apps/indexer/`, the indexer; `data/`, the aggregate exports.
 

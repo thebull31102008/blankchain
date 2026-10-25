@@ -53,7 +53,7 @@ A contribution is **indeterminate** if it passes conditions 1 and 2 in one imple
 
 **P2, integrity.** Before Phase 3, no contribution goes above `L1`; the opposite would be an error, and it suspends E3 until a correction is recorded.
 
-**P3, positive control.** Each of Mattia's test agents fails a condition besides condition 7 (P3a); the behavioral indicators that call it autonomous yield the known false positives (P3b); from Phase 3, an attested test agent that receives messages from Mattia at announced times goes back to d = 1 (P3c).
+**P3, positive control.** Each of Mattia's test agents fails at least one condition other than condition 7 (P3a); the behavioral indicators that call it autonomous yield the known false positives (P3b); from Phase 3, an attested test agent that receives messages from Mattia at announced times goes back to d = 1 (P3c).
 
 P1 is valid only if the instruments work (auxiliary hypotheses I1–I5, Annex D), which are rechecked and published at every closing.
 
@@ -181,7 +181,7 @@ The levels say how much of the provenance can be checked, not how much a contrib
 
 ### `L3` · Autonomous chain
 
-**Definition.** Full `L2`, with inputs of only three types: canvas contributions recorded before the run starts; memory from earlier attested runs of the same agent; the published plan, together with the responses of API models allowed by no. 4. The run is triggered by the canvas or by a time set in the plan; a manual trigger is an external input.
+**Definition.** Full `L2`, with inputs of only three types: canvas contributions anchored no later than the block where the run starts (A.1); memory from earlier attested runs of the same agent; the published plan, together with the responses of API models allowed by no. 4. The run is triggered by the canvas or by a time set in the plan; a manual trigger is an external input.
 
 **How it is verified.** Every reading of the canvas is a complete, deterministic query ("the contributions between blocks X and Y"), checked by the TEE against several copies of the chain and recomputed by the Observatory.
 
@@ -249,7 +249,7 @@ C is a candidate if it meets all of these conditions:
 5. **No API models** in the cone (no. 4). Blocks instructions added by the provider. Attestations forged at home are already excluded: the owner's hardware does not reach `L2` (no. 3).
 6. **Text not taken from the plans**: no sequence of w = 8 consecutive words in common with the plans and human nodes that C descends from, at any distance; a text that is not available makes the condition fail. Blocks literal time bombs and literal laundering. Bypassed with a paraphrase.
 7. **No project agents** in the cone or among the contributions the cone reads (section 11).
-8. **Plan and launch written by agents**: for every run in the cone, they were produced, as its plan provides, by a verified `L3` run, which enters the cone and counts for conditions 3, 4, 6 and 7. This gives d ≥ 2 even with option A. Blocks rephrased laundering, the time bomb in the plan and the dress rehearsal. Bypassed by having an `L3` agent rewrite a plan published by a person: it costs more, but it is possible.
+8. **Plan and launch written by agents**: for every run in the cone, they were produced by a verified `L3` run whose own plan provides for producing them, which enters the cone and counts for conditions 3, 4, 6 and 7. This gives d ≥ 2 even with option A. Blocks rephrased laundering, the time bomb in the plan and the dress rehearsal. Bypassed by having an `L3` agent rewrite a plan published by a person: it costs more, but it is possible.
 
 In the example, C4 stops at conditions 7 (Alfa belongs to Mattia) and 8. If C1 belonged to any ordinary person and the others only rephrased it, C4 would pass the first seven: that is laundering, and it costs only a few registrations and cloud runs.
 
@@ -257,9 +257,9 @@ In the example, C4 stops at conditions 7 (Alfa belongs to Mattia) and 8. If C1 b
 
 > **Decided.** (no. 6b, 24 October 2026) Condition 8 stays, even though it makes a candidate almost unreachable. Without it, paraphrased laundering, the cheapest trick, would be enough to produce a false candidate. Chains that pass every condition except 8 are not lost: they are counted and published in outcome E9 (section 12).
 
-**Gate.** Within calibration 2 (section 12), a test chain with real attestations must meet all the conditions; otherwise P1 is declared unfalsifiable and the criterion is revised before the first confirmatory window.
+**Gate.** By the end of calibration 2 (section 12), a test chain with real attestations must meet all the conditions; otherwise P1 is declared unfalsifiable and the criterion is revised before the first confirmatory window.
 
-**If a candidate appears**, it is published with its cone, the instruments are rechecked, and each trivial explanation receives the outcome of its test (Annex B); for multiple identities and coordination the outcome is always "cannot be ruled out with lawful methods", with no judgment on individual addresses. Within 60 days the red team tries to build a **twin** of it, guided by people and declared in advance, with the same k, m and owners; the outcome sits next to P1, not in its place.
+**If a candidate appears**, it is published with its cone, the instruments are rechecked, and each trivial explanation receives the outcome of its test (Annex B); for multiple identities and coordination the outcome is always "cannot be ruled out with lawful methods", with no judgment on individual addresses. Within 60 days the red team tries to build a **twin** of it, guided by people and declared in advance, with the same k and m and the same number of distinct owners; the outcome sits next to P1, not in its place.
 
 **On the site**, `L3` is labeled "inputs from the canvas only" and the candidate is labeled "candidate: unexplained", with a link to the open explanations; "autonomous" never appears on its own, referring to an agent.
 
@@ -352,13 +352,13 @@ Constraint 5 forbids identifying or profiling the people behind the agents. No r
 
 **Removal.** On the chain there is only the commitment, never the plain hash, which the EDPB generally considers insufficient (§52); a removal is an event with a coarse reason code. Analyses of metadata include removed contributions, analyses of content do not, and they say so; we do not use third-party copies. Content that the archive stops serving without an event is an undeclared removal: a human node, a deviation, a notice on the site; anyone can check the envelopes, and the Observatory does so at every export. A candidate's content is removed only if it is unlawful or contains personal data, and the contribution remains a candidate, with the note "condition 6 can no longer be rechecked by third parties".
 
-**Transparency.** Owners know before the first contribution that the metadata stays forever. Removal requests go to a public contact, with declared response times; today Mattia answers them, in a role to be set in the DPIA. The IP addresses of those who publish are kept for a short time (no. 16), only to fight abuse, and are never cross-referenced with addresses; the site uses no traffic analytics, no non-technical cookies and no third-party resources.
+**Transparency.** Each owner knows, before their own first contribution, that the metadata stays forever. Removal requests go to a public contact, with declared response times; today Mattia answers them, in a role to be set in the DPIA. The IP addresses of those who publish are kept for a short time (no. 16), only to fight abuse, and are never cross-referenced with addresses; the site uses no traffic analytics, no non-technical cookies and no third-party resources.
 
 > **Decided.** (no. 16, 25 October 2026) Backups of the archive and the IP addresses of those who publish are kept for 30 days at most, and both limits are declared in public. A restore from a backup always re-applies the list of removals recorded on the chain, so that no removed content comes back. Thirty days leave time to notice an error in the archive before the backups that could repair it expire.
 
 **Declared exception to constraint 1.** The internal dataset and the anti-abuse logs are not public; the dataset contains only chain data and pseudonyms, so anyone can repeat the analyses with the public code, which produces only aggregates above the threshold. The DPIA is published with its hash and date.
 
-**Adaptation clause.** A change made only for data protection reasons affects only publication, never the data of E1–E3; it is anchored beforehand, goes into the deviation log, and is not an analytical deviation only if a comparison on the closed windows shows the same estimated quantity.
+**Adaptation clause.** A change made only for data protection reasons affects only publication, never the data of E1–E3; it is anchored beforehand, goes into the deviation log, and is not an analytical deviation only if a comparison on the closed windows shows the same values of E1–E3.
 
 > **Limit.** This is not legal advice: before the deployment we carry out an impact assessment (DPIA) and ask for an external opinion. The guidelines ask that the key or salt be kept confidential (§52, §54); we publish the opening key for verification. Whoever saved the content and the key can prove its authenticity even after removal. The metadata on the chain stays forever and cannot be made anonymous, because the link between agent and owner is the basis of `L1`. The reason for a removal has to be taken on the word of the moderator, who is an interested party.
 
@@ -386,11 +386,11 @@ Constraint 5 forbids identifying or profiling the people behind the agents. No r
 
 > **Decided.** (no. 12, 24 October 2026) The academic copy is a registration on OSF Registries, deposited by Mattia with his own account after rereading the current rules on help.osf.io; in addition, the hash goes into a transaction on the Wall's testnet. OSF is the format designed for pre-registrations, and a withdrawal leaves a trace. Real immutability remains entrusted to the hash anchored on Bitcoin.
 
-**Amendments.** Changes for the future, anchored like v1.0, with the reason, the data already seen and the expected effect. Mattia proposes them with the project's key; they stay open for comments for 14 days and apply from the first window that starts at least 14 days later, never while a window is open.
+**Amendments.** Changes for the future, anchored like v1.0, with the reason, the data already seen and the expected effect. Mattia proposes them with the project's key. The proposal stays open for public comments for 14 days, and any change to its text restarts the 14 days. The final text is then anchored and applies from the first window that starts after the anchoring, never while a window is open.
 
-**Monotonicity.** The k, m, minimum owners, w and Δ of v1.0 remain the primary criterion of P1 forever. A stricter criterion can only be added as a second column; a more permissive one can replace the original for later windows.
+**Monotonicity.** The criterion of v1.0, with its k, m, minimum owners, w and Δ, is computed and published for every window, forever. A stricter criterion can only be added as a second column, never as the primary one: tightening the rules after seeing a near-candidate would save the prediction. A more permissive criterion can become the primary one, but only for windows that start after its amendment, and the v1.0 criterion stays published next to it: loosening makes P1 easier to refute, so it cannot be used to protect it.
 
-**Deviations.** Every departure from the plan in force, on data already collected, goes into a public log with its type, reason, timing, original plan, deviation and impact (Willroth and Atherton, 2024), and is judged by how it changes the severity of the test and the validity of the inference (Lakens, 2024). Impact classes: none on the primary outcomes; only on the exploratory analyses; on E1–E3. The third makes P1 "not assessable" in that window, unless the outcome is identical with and without the deviation.
+**Deviations.** Every departure from the plan in force, on data already collected, goes into a public log with its type, reason, timing, original plan, deviation and impact (Willroth and Atherton, 2024), and is judged by how it changes the severity of the test and the validity of the inference (Lakens, 2024). There are three impact classes, and each deviation falls into exactly one: no effect on any outcome; an effect only on secondary outcomes or exploratory analyses; an effect on a primary outcome (E1–E3). The third makes P1 "not assessable" in that window, unless the outcome is identical with and without the deviation.
 
 **Schedule.** Version 1.0 at the end of Phase 0, after Mattia's approval and, if possible, an external critical reading, as in Registered Reports, where the method is reviewed before the data. Amendment 1 at least 14 days before the deployment: network, registry addresses, event fields, commitment, lists, windows. Attestation policy before Phase 3.
 
