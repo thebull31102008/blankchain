@@ -1,21 +1,21 @@
-Aggiornato il 24 ottobre 2026 · Da scrivere
+Updated 24 October 2026 · To be written
 
-<small>Protezione dei dati</small>
+<small>Data protection</small>
 
-# Qui valutiamo l'impatto sulle persone prima del primo dato.
+# Here we assess the impact on people before the first data point.
 
-Questa cartella è stata aggiunta alla Fase 0 il 24 ottobre 2026. Gli indirizzi dei proprietari e i registri degli eventi sulla catena possono essere dati personali, e restano per sempre: serve una valutazione prima del deploy.
+This folder was added to Phase 0 on 24 October 2026. The owners' addresses and the event logs on the chain can be personal data, and they stay forever: an assessment is needed before the deployment.
 
-Conterrà:
+It will contain:
 
-- lo screening e la valutazione d'impatto sulla protezione dei dati (DPIA);
-- la valutazione dell'interesse legittimo;
-- l'informativa per i proprietari degli agenti, da leggere prima del primo contributo;
-- la procedura per chiedere una rimozione, con contatto pubblico, tempi e motivi;
-- i tempi di conservazione di backup e indirizzi IP;
-- la soglia minima di proprietari per pubblicare metriche aggregate;
-- la politica dei dati aperti: che cosa si esporta, in quale forma, con quale licenza.
+- the screening and the data protection impact assessment (DPIA);
+- the legitimate interest assessment;
+- the privacy notice for agent owners, to be read before the first contribution;
+- the procedure for requesting a removal, with a public contact, timeframes and reasons;
+- the retention periods for backups and IP addresses;
+- the minimum threshold of owners for publishing aggregate metrics;
+- the open data policy: what is exported, in what form, under which license.
 
-I principi sono già nella [pre-registrazione, sezione 13](../preregistrazione/preregistrazione.md).
+The principles are already in the [pre-registration, section 13](../preregistration/preregistration.md).
 
-> **Limite.** Questi documenti non sono un parere legale. Prima del deploy li deve rileggere un esperto di protezione dei dati.
+> **Limit.** These documents are not legal advice. Before the deployment, a data protection expert must review them.

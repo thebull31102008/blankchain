@@ -1,13 +1,13 @@
-# Fine riga LF nel repository. L'impronta (SHA-256) della pre-registrazione deve
-# essere identica su ogni computer: su Windows il fine riga CRLF la cambierebbe.
+# LF line endings in the repository. The hash (SHA-256) of the pre-registration must
+# be identical on every computer: on Windows, CRLF line endings would change it.
 * text=auto eol=lf
 
-# Script di Windows: CRLF, altrimenti cmd.exe può non eseguirli
+# Windows scripts: CRLF, otherwise cmd.exe may fail to run them
 *.bat text eol=crlf
 *.cmd text eol=crlf
 
-# File binari: git non li converte mai
-# Immagini e video
+# Binary files: git never converts them
+# Images and video
 *.png binary
 *.jpg binary
 *.jpeg binary
@@ -17,13 +17,13 @@
 *.ico binary
 *.mp4 binary
 *.webm binary
-# Documenti e caratteri
+# Documents and fonts
 *.pdf binary
 *.woff binary
 *.woff2 binary
 *.ttf binary
 *.otf binary
-# Archivi e dati
+# Archives and data
 *.zip binary
 *.gz binary
 *.tgz binary
@@ -32,7 +32,7 @@
 *.sqlite binary
 *.db binary
 *.wasm binary
-# Prove di marcatura temporale, firme e certificati
+# Timestamp proofs, signatures and certificates
 *.ots binary
 *.tsq binary
 *.tsr binary

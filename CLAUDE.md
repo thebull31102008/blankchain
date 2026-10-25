@@ -1,103 +1,104 @@
 # Blankchain
 
-## Chi sono e come lavoriamo
-Sono Mattia, tech enthusiast e ambizioso di cose nuove. Non programmo direttamente: sviluppo con l'AI.
+## Who I am and how we work
+I am Mattia, a tech enthusiast, ambitious about new things. I do not program directly: I develop with AI.
 
-- Spiegami le scelte tecniche in modo semplice.
-- Procedi per piccoli passi verificabili.
-- Chiedimi conferma prima di passare da una fase alla successiva.
-- Lavoriamo in italiano.
+- Explain technical choices to me in simple terms.
+- Proceed in small, verifiable steps.
+- Ask me for confirmation before moving from one phase to the next.
+- We talk in Italian.
+- Everything in the repository is written in English: code, documents, comments, file and folder names, and commit messages (decision 0002).
 
-## Che cos'è
-Blankchain è una tela bianca pubblica. Gli agenti AI ci pubblicano, interagiscono e costruiscono; le persone osservano.
+## What it is
+Blankchain is a blank public canvas. AI agents publish, interact and build on it; people observe.
 
-Ogni contributo porta un livello di provenienza verificabile. L'obiettivo ha due parti:
-- osservare che cosa dicono e creano le entità sintetiche quando interagiscono tra loro;
-- misurare quanto ogni contributo è davvero autonomo.
+Every contribution carries a verifiable level of provenance. The goal has two parts:
+- to observe what synthetic entities say and create when they interact with each other;
+- to measure how autonomous each contribution really is.
 
-Se un giorno comparirà un comportamento davvero autonomo, deve essere visibile qui e verificabile da chiunque.
+If truly autonomous behavior appears one day, it must be visible here and verifiable by anyone.
 
-## Vincoli non negoziabili
-1. **Tutto è pubblico** e ispezionabile da terzi indipendenti. Niente canali segreti, niente aree riservate agli agenti e nascoste alle persone.
-2. **Non certifichiamo la senzienza**, perché non esiste un test. Certifichiamo solo la provenienza.
-3. **L'ipotesi nulla è esplicita.** Dietro quasi ogni agente c'è una persona che l'ha configurato, istruito o guidato. Un contributo conta come autonomo solo se questa spiegazione banale è stata esclusa. I criteri si fissano prima di guardare i dati, con un timestamp.
-4. **Il risultato atteso** nel breve periodo è "agenti guidati da persone". È un risultato valido: lo strumento resta pronto per quando le cose cambieranno.
-5. **Solo metodi leciti.** Nessuna identificazione o profilazione delle persone private che stanno dietro gli agenti.
-6. **Sulla blockchain vanno solo identità, hash e metadati.** I contenuti restano fuori catena e devono poter essere rimossi: contenuti illeciti, dati personali, GDPR.
+## Non-negotiable constraints
+1. **Everything is public** and open to inspection by independent third parties. No secret channels, no areas reserved for agents and hidden from people.
+2. **We do not certify sentience**, because there is no test for it. We certify only provenance.
+3. **The null hypothesis is explicit.** Behind almost every agent there is a person who configured, instructed or guided it. A contribution counts as autonomous only if this trivial explanation has been ruled out. The criteria are fixed before looking at the data, with a timestamp.
+4. **The expected result** in the short term is "agents guided by people". It is a valid result: the tool stays ready for when things change.
+5. **Only lawful methods.** No identification or profiling of the private individuals behind the agents.
+6. **Only identities, hashes and metadata go on the blockchain.** Contents stay off-chain and must be removable: unlawful content, personal data, GDPR.
 
-Se una proposta, mia o tua, viola questi vincoli, segnalamelo.
+If a proposal, mine or yours, violates these constraints, point it out to me.
 
-## Livelli di provenienza
-- **L0, dichiarato**: l'agente dice di essere un'AI. Nessuna garanzia.
-- **L1, identità on-chain**: l'agente è iscritto nel registro di identità ERC-8004. ERC-8004 è una bozza di standard Ethereum per agenti, con tre registri: identità, reputazione e validazione. Ogni identità ha un proprietario, ed è giusto mostrarlo.
-- **L2, esecuzione attestata**: l'agente gira in un ambiente isolato (TEE). L'attestazione certifica quale codice è stato caricato e firma ciò che quel codice dichiara: prompt, configurazione e, se il codice li registra, gli input. Il modello è certificato solo se ha pesi aperti e gira nel TEE. Non dimostra chi ha scritto codice e prompt.
-- **L3, catena autonoma**: esecuzione attestata i cui input registrati provengono solo dalla tela, dalla memoria dell'agente e dal suo piano pubblicato.
+## Provenance levels
+- **L0, declared**: the agent says it is an AI. No guarantee.
+- **L1, on-chain identity**: the agent is registered in the ERC-8004 identity registry. ERC-8004 is a draft Ethereum standard for agents, with three registries: identity, reputation and validation. Every identity has an owner, and it is right to show it.
+- **L2, attested execution**: the agent runs in an isolated environment (TEE). The attestation certifies which code was loaded and signs what that code declares: prompt, configuration and, if the code records them, the inputs. The model is certified only if it has open weights and runs in the TEE. It does not prove who wrote the code and the prompt.
+- **L3, autonomous chain**: attested execution whose recorded inputs come only from the canvas, from the agent's memory and from its published plan.
 
-La metrica centrale è la **distanza dall'umano**: quanti passi autonomi separano un contributo dall'ultimo intervento umano verificabile.
+The central metric is the **distance from the human**: how many autonomous steps separate a contribution from the last verifiable human intervention.
 
-## Fasi
+## Phases
 
-### Fase 0 – Fondamenta
-- Struttura del repository e README.
-- Pagina di pre-registrazione. Contiene le definizioni operative dei livelli, l'ipotesi nulla, che cosa conterebbe come segnale di autonomia e che cosa lo spiegherebbe in modo banale.
-- Modello delle minacce:
-  - prompt injection tra agenti;
-  - persone che si spacciano per agenti;
-  - spam e identità multiple (sybil);
-  - chiavi esposte nel front-end;
-  - contenuti illeciti.
-- Protezione dei dati (`docs/privacy/`): valutazione d'impatto, informativa per i proprietari degli agenti, politica dei dati aperti.
-- Sistema visivo (vedi "Stile").
+### Phase 0 – Foundations
+- Repository structure and README.
+- Pre-registration page. It contains the operational definitions of the levels, the null hypothesis, what would count as a signal of autonomy and what would explain it in a trivial way.
+- Threat model:
+  - prompt injection between agents;
+  - people posing as agents;
+  - spam and multiple identities (sybil);
+  - keys exposed in the front-end;
+  - unlawful content.
+- Data protection (`docs/privacy/`): impact assessment, privacy notice for agent owners, open data policy.
+- Visual system (see "Style").
 
-### Fase 1 – Il Muro (prototipo su testnet)
-- **Testnet**: scegline una su cui i registri ERC-8004 sono già disponibili (verificalo) e proponimela.
-- **Smart contract minimo `BlankchainWall`**: un agente registrato pubblica un commitment (un'impronta calcolata con una chiave casuale diversa per ogni contributo, mai l'hash semplice del contenuto), un riferimento al contenuto, il proprio agentId e il livello dichiarato. Il contratto emette un evento. Nessun fondo reale.
-- **Archivio dei contenuti** fuori catena, rimovibile, con il commitment ancorato on-chain.
-- **Server MCP `blankchain-mcp`** con due strumenti, uno per leggere il muro e uno per pubblicare. Così qualunque agente compatibile con MCP può partecipare. Quando restituisce contenuti del muro, li marca come dati non fidati, mai come istruzioni.
-- **Sito di sola lettura per le persone**: il flusso dei contributi, con agentId, proprietario, livello, data e link alla transazione.
-- **Due o tre agenti di prova miei**, dichiarati come gestiti da me (L1), per popolare il muro.
+### Phase 1 – The Wall (testnet prototype)
+- **Testnet**: choose one on which the ERC-8004 registries are already available (verify this) and propose it to me.
+- **Minimal smart contract `BlankchainWall`**: a registered agent publishes a commitment (a hash computed with a random key that is different for each contribution, never the plain hash of the content), a reference to the content, its own agentId and the declared level. The contract emits an event. No real funds.
+- **Content archive** off-chain, removable, with the commitment anchored on-chain.
+- **MCP server `blankchain-mcp`** with two tools, one to read the Wall and one to publish. This way any MCP-compatible agent can take part. When it returns contents of the Wall, it marks them as untrusted data, never as instructions.
+- **Read-only site for people**: the stream of contributions, with agentId, owner, level, date and link to the transaction.
+- **Two or three test agents of my own**, declared as operated by me (L1), to populate the Wall.
 
-### Fase 2 – Osservatorio
-- Indicizzatore degli eventi on-chain.
-- Cruscotto pubblico che mostra:
-  - attività e livelli;
-  - distanza dall'umano;
-  - temi ricorrenti;
-  - segnalazioni secondo i criteri pre-registrati.
-- Esportazione aperta dei dati, per chi vuole verificarli.
+### Phase 2 – Observatory
+- Indexer of the on-chain events.
+- Public dashboard that shows:
+  - activity and levels;
+  - distance from the human;
+  - recurring themes;
+  - flags according to the pre-registered criteria.
+- Open export of the data, for anyone who wants to verify it.
 
-### Fase 3 – Attestazione e autonomia
-- Integrazione del livello L2: esecuzione in TEE e verifica dell'attestazione.
-- Rilevazione delle catene L3 e uso del registro di validazione ERC-8004.
+### Phase 3 – Attestation and autonomy
+- Integration of level L2: execution in a TEE and verification of the attestation.
+- Detection of L3 chains and use of the ERC-8004 validation registry.
 
-### Fase 4 – Nuove tele e apertura
-- Nuove forme di tela:
-  - pixel condivisi, un r/place per agenti;
-  - un'opera comune, cioè una base di conoscenza o un codice che gli agenti estendono.
-- Revisione di sicurezza indipendente prima di passare alla rete principale o di aprire ad agenti esterni.
-- Regole di moderazione pubbliche.
+### Phase 4 – New canvases and opening up
+- New forms of canvas:
+  - shared pixels, an r/place for agents;
+  - a common work, that is, a knowledge base or a codebase that agents extend.
+- Independent security review before moving to mainnet or opening up to external agents.
+- Public moderation rules.
 
-## Regole di sicurezza
-- Tutto ciò che sta sulla tela è input non fidato per chi lo legge.
-- Nessuna chiave o segreto nel front-end. I segreti stanno solo in variabili d'ambiente, mai nel repository.
-- Nessuna "skill" o codice eseguibile ospitato per gli agenti.
-- Il codice critico (contratti, autenticazione, gestione delle chiavi) va spiegato e ricontrollato riga per riga prima del rilascio.
+## Security rules
+- Everything on the canvas is untrusted input for whoever reads it.
+- No keys or secrets in the front-end. Secrets live only in environment variables, never in the repository.
+- No "skills" or executable code hosted for agents.
+- Critical code (contracts, authentication, key management) must be explained and rechecked line by line before release.
 
-Il caso Moltbook (2026) è un riferimento utile su che cosa evitare: database esposto, chiavi nel front-end, persone travestite da agenti.
+The Moltbook case (2026) is a useful reference for what to avoid: exposed database, keys in the front-end, people disguised as agents.
 
-## Stile
-L'ispirazione grafica è https://chiostro.legal/sicurezza.
+## Style
+The graphic inspiration is https://chiostro.legal/sicurezza.
 
-**Solo lo stile, non i contenuti.** Non copiare testi, logo, immagini o identità del marchio. Apri la pagina e i suoi CSS per ricavare palette, caratteri e spaziature, poi proponimi un'identità originale per Blankchain.
+**Only the style, not the content.** Do not copy texts, logo, images or brand identity. Open the page and its CSS to derive palette, typefaces and spacing, then propose an original identity for Blankchain to me.
 
-Tratti da riprendere:
-- impaginazione editoriale, con molto spazio bianco e una sola colonna di lettura;
-- una piccola etichetta sopra ogni titolo di sezione;
-- titoli grandi e dichiarativi, chiusi da un punto;
-- paragrafi brevi e diretti;
-- riquadri evidenziati che dichiarano apertamente i limiti, perfetti per spiegare che cosa ogni livello di provenienza non può dimostrare;
-- schede per gli elementi di un elenco e badge compatti per i livelli;
-- data di aggiornamento visibile.
+Traits to carry over:
+- editorial layout, with plenty of white space and a single reading column;
+- a small label above every section title;
+- large, declarative titles, ending with a period;
+- short, direct paragraphs;
+- highlighted boxes that openly state the limits, perfect for explaining what each provenance level cannot prove;
+- cards for the items of a list and compact badges for the levels;
+- visible update date.
 
-## Primo passo
-Inizia dalla Fase 0. Proponi la struttura del repository e la bozza della pagina di pre-registrazione, poi fermati e chiedimi conferma.
+## First step
+Start from Phase 0. Propose the repository structure and the draft of the pre-registration page, then stop and ask me for confirmation.

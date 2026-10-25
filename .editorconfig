@@ -1,4 +1,4 @@
-# Regole per gli editor: UTF-8 e fine riga LF, come nel repository.
+# Editor rules: UTF-8 and LF line endings, as in the repository.
 root = true
 
 [*]

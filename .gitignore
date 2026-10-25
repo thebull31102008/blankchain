@@ -1,4 +1,4 @@
-# Segreti: mai nel repository
+# Secrets: never in the repository
 .env
 .env.*
 *.env
@@ -22,23 +22,23 @@ mnemonic.txt
 secrets/
 !.env.example
 
-# Certificati pubblici delle autorità di marcatura temporale:
-# servono a verificare le prove della pre-registrazione, quindi restano
-!docs/preregistrazione/**/*.pem
+# Public certificates of the timestamping authorities:
+# they are needed to verify the proofs of the pre-registration, so they stay
+!docs/preregistration/**/*.pem
 
-# Dipendenze e file generati
-# (le cartelle di build di ogni parte vanno nel .gitignore della sua cartella, quando nasce)
+# Dependencies and generated files
+# (the build folders of each part go in the .gitignore of its own folder, when it is created)
 node_modules/
 *.tsbuildinfo
 .eslintcache
 
-# Impostazioni locali degli strumenti
+# Local tool settings
 .claude/settings.local.json
 CLAUDE.local.md
 .idea/
 *.log
 
-# File di sistema
+# System files
 .DS_Store
 Thumbs.db
 desktop.ini
