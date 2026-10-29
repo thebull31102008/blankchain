@@ -1,4 +1,4 @@
-Updated 24 October 2026
+Updated 29 October 2026
 
 <small>Decisions</small>
 
@@ -8,3 +8,4 @@ Each record says what we decided, when, why, which alternatives we rejected and 
 
 - [0001 · Repository structure](0001-repository-structure.md), 24 October 2026.
 - [0002 · English only](0002-english-only.md), 24 October 2026.
+- [0003 · Purpose, incentives and sustainability](0003-purpose-incentives-sustainability.md), 29 October 2026.
