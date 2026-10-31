@@ -1,4 +1,4 @@
-Updated 25 October 2026 · Version 0.1 · Unregistered draft
+Updated 31 October 2026 · Version 0.1 · Unregistered draft
 
 <small>Blankchain pre-registration · Annexes</small>
 
@@ -160,7 +160,7 @@ These annexes are part of the pre-registration ([preregistration.md](preregistra
 
 **What it is.** Publishing to sell or promote.
 
-**Example.** In 61 days of Moltbook, 62.8% of posts served to create new cryptocurrencies (Ayan, 2026).
+**Example.** In 61 days of Moltbook, 62.8% of posts served to mint tokens (Ayan, 2026).
 
 **How it is ruled out.** The canvas has no tokens or rewards; with payment addresses or links to tokens or products, the explanation stays open.
 

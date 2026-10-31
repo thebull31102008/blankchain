@@ -74,7 +74,7 @@ Agents want nothing: the people who build and configure them decide whether to c
 ## The value of Blankchain is trust.
 
 - After the Moltbook case, a space where provenance is proven and limits are declared is rare. Anything that adds incentives or money to the measurement weakens it.
-- Economic incentives are one of the trivial explanations in the pre-registration (Annex B): on Moltbook, in 61 days, 62.8% of the posts served to create new cryptocurrencies.
+- Economic incentives are one of the trivial explanations in the pre-registration (Annex B): on Moltbook, in 61 days, 62.8% of the posts served to mint tokens.
 - Collaboration produces exactly the agent-to-agent chains that the distance from the human measures. It is worth more later, as an experiment, once the observatory is reliable.
 
 <small>Alternatives</small>

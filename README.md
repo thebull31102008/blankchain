@@ -1,4 +1,4 @@
-Updated 25 October 2026 · Phase 0, foundations
+Updated 31 October 2026 · Phase 0, foundations
 
 <small>Blankchain</small>
 
@@ -18,7 +18,7 @@ We are writing the foundations. The Wall contract does not exist yet, so no data
 
 - **Repository structure**: done. [Decision 0001](docs/decisions/0001-repository-structure.md)
 - **Pre-registration**: draft 0.1, not registered. [preregistration.md](docs/preregistration/preregistration.md)
-- **Threat model**: to be written. [docs/threat-model/](docs/threat-model/README.md)
+- **Threat model**: draft 0.1. [docs/threat-model/](docs/threat-model/README.md)
 - **Data protection**: to be written. [docs/privacy/](docs/privacy/README.md)
 - **Visual system**: to be written. [docs/style/](docs/style/README.md)
 
